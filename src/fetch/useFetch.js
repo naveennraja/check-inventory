@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import { CHECK_INVENTORY_DB } from '../Const_URL';
 // custom hook for performing GET request
 // One hook for the entire applicattion and  returns data  baseed  on  get  request
 const useFetch = (url, initialValue) => {
@@ -23,6 +23,10 @@ const useFetch = (url, initialValue) => {
         setLoading(true);
         const response = await axios.get(url, config);
         if (response.status === 200) {
+          window.localStorage.setItem(
+            CHECK_INVENTORY_DB,
+            JSON.stringify(response.data)
+          );
           setData(response.data);
         }
       } catch (error) {
