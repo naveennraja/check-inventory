@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import './css_vendor/bootstrap.min.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import useFetch from './fetch/useFetch';
 import Loading from './components/UIComponents/Loading/Loading';
 import ListContainer from './container/ListContainer';
@@ -18,7 +18,7 @@ function App() {
       {/* Check if Data is loaded and pass the data to required components */}
       {data && data.length > 0 && (
         <>
-          <BrowserRouter>
+          <HashRouter>
             <h1 className='main-heading'>Joe's Garage</h1>
             <div className='jumbotron container'>
               <Route
@@ -28,7 +28,7 @@ function App() {
               />
               <Route path='/car-detail:id' component={() => <DetailPage />} />
             </div>
-          </BrowserRouter>
+          </HashRouter>
         </>
       )}
     </div>

@@ -1,6 +1,5 @@
 {
   "name": "check-inventory",
-  "homepage": "http://naveennraja.github.io/check-inventory",
   "proxy": "https://react-challenge-api.azurewebsites.net",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
