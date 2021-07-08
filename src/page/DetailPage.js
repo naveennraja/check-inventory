@@ -30,7 +30,9 @@ const DetailPage = () => {
           </h4>
           <ul className='list-group w-50 m-auto'>
             {Object.keys(icons).map((key) => (
-              <li className='list-group-item d-flex justify-content-between align-items-center'>
+              <li
+                key={`list-detail-${key}`}
+                className='list-group-item d-flex justify-content-between align-items-center'>
                 <i className={`fas ${icons[key]}`}></i>
                 <span className='badge  rounded-pill  text-capitalize'>
                   {data[0][key]}

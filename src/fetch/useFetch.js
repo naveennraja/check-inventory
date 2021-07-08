@@ -8,9 +8,20 @@ const useFetch = (url, initialValue) => {
   const [loading, setLoading] = useState(true); //   hooks for  loading
   useEffect(() => {
     const fetchData = async function() {
+      var config = {
+        method: 'GET',
+
+        mode: 'no-cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+        },
+        // withCredentials: true,
+        credentials: 'all-origin'
+      };
       try {
         setLoading(true);
-        const response = await axios.get(url);
+        const response = await axios.get(url, config);
         if (response.status === 200) {
           setData(response.data);
         }
