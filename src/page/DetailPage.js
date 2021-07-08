@@ -20,12 +20,12 @@ const DetailPage = () => {
   return (
     <>
       <div className='jumbotron text-white'>
-        <Link className='btn btn-primary' to={`/`}>
+        <Link className='btn btn-primary my-2' to={`/`}>
           <i className='fas fa-long-arrow-alt-left m-2'></i>
           <span>Back</span>
         </Link>
-        <div className='vehicle-detail-container'>
-          <h4 className='text-center  model_variant'>
+        <div className='vehicle-detail-container my-2'>
+          <h4 className='text-center  model_variant '>
             {data[0].model_variant}
           </h4>
           <ul className='list-group w-50 m-auto'>
