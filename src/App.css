@@ -1,0 +1,13 @@
+body {
+  background: #232427;
+}
+.main-heading {
+  text-align: center;
+  color: #2196f3;
+}
+.list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
